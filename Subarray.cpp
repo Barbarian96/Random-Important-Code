@@ -31,7 +31,7 @@ for(s=0;s<n;s++)
 		for(k=s;k<=e;k++)
 		{
 			data.push_back(arr[k]);
-		}
+		}B
 		for(auto x: data)cout<<x<<" ";
 			cout<<endl;
 	}
