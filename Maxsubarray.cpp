@@ -44,12 +44,7 @@ cout << maxsum << "\n";
 
 
 //Algorithm 3
-int maxsum = 0, sum = 0;
-for (int k = 0; k < n; k++) {
-sum = max(array[k],sum+array[k]);
-maxsum = max(maxsum,sum);
-}
-cout << maxsum << "\n";
+
 
 
 

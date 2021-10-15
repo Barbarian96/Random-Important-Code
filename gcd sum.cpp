@@ -36,14 +36,14 @@ const double PI = acos(-1);
 int phi[maxx];
 void genphi(int n)
 {
-    for (int i=1; i<=n; i++)
+    for (int i=1; i<n; i++)
         phi[i] = i; 
-    for (int p=2; p<=n; p++)
+    for (int p=2; p<n; p++)
     {
         if (phi[p] == p)
         {
             phi[p] = p-1;
-            for (int i = 2*p; i<=n; i += p)
+            for (int i = 2*p; i<n; i += p)
             {
             phi[i] =  ((phi[i]/p) * (p-1));
             }
@@ -67,25 +67,26 @@ Output;
 /*-----------------------START-----------------------*/
 
 
-int q,n=12;
-cin>>q;
+int q=1,n=10,p=n;
+//cin>>q;
 genphi(maxx);
 while(q--)
 {
-
-    cin>>n;
+    //cin>>n;
+    DDD;
     ull int res=0;
-    for(int i=1;i*i<=n;i++)
-    {
-        if(n%i==0)
+    for(int j=1;j<p;j++){
+        for(int i=1;i*i<=n;i++)
         {
-            int d1=i;
-            int d2=n/i;
-            res=res+(d1*phi[d2]);
-            if(d1!=d2)
-                res=res+(d2*phi[d1]);
-        }
-    }
+            if(n%i==0)
+            {
+                int d1=i;
+                int d2=n/i;
+                res=res+(d1*phi[d2]);
+                if(d1!=d2)
+                    res=res+(d2*phi[d1]);
+            }
+        }}
     cout<<res<<dl;
 }
 

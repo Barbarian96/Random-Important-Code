@@ -23,19 +23,23 @@ for(i=0;i<n;i++)
 	cin>>arr[i];
 }
 
-for(s=0;s<n;s++)
-{
-	for(e=s;e<n;e++)
+
+ for (s = 0; s < n; s++)
 	{
-		vector <int> data;
-		for(k=s;k<=e;k++)
+	  for (e = s+1; e < n; e++)
+	    {
+	      for (k = s; k <= e; k++)
+
 		{
-			data.push_back(arr[k]);
-		}B
-		for(auto x: data)cout<<x<<" ";
-			cout<<endl;
+		  if (data[i] > data[i + 1])
+		    {
+		      i--;
+		      break;
+		    }
+		}
+	      if (i == (int) data.size () - 1)
+		z++;
+	      data.erase (data.begin (), data.end ());
+	    }
 	}
-}
-
-
 }
