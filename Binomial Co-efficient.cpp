@@ -33,12 +33,13 @@
 #define HP 1000000007
 using namespace std; 
 const double PI = acos(-1);
-//Tinme Complexcity O(n+k);
+
+//Time Complexcity O(n+k);
+
 int fact[maxx];
 
 ull int pwr(ull int x,ull int n)
 {
-    DDD;
     ull int res=1;
     while(n>0)
     {
@@ -52,7 +53,6 @@ ull int pwr(ull int x,ull int n)
 
 ull int ncr(ull int n,ull int k)
 {
-    DDD;
     if(k>n)return 0;
     ull int res=fact[n];
     res=res*pwr(fact[k],HP-2)%HP;

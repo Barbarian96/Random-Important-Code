@@ -4,13 +4,6 @@ using namespace std;
 int main(){
 
 
-    
-    
-    freopen("/home/mozahed/Documents/Love/input.txt", "r", stdin);
-    freopen("/home/mozahed/Documents/Love/output.txt", "w", stdout);
-    
-    
-    
     int n;
     cin>>n;
     vector<pair<int,int> > v1;

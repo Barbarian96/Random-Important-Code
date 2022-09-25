@@ -1,5 +1,6 @@
 #include <bits/stdc++.h> 
 using namespace std; 
+
 bool prime(int n)  
 {  
     if(n==1) return false;
@@ -15,14 +16,16 @@ bool prime(int n)
         c++;
         break;
     }
-    }
-    (c==0)?return true;:return false;;
+
+    if(c==0)return true;
+    return false;
+    
     }
 }  
 
 int main()  
 {  
-     #ifndef ONLINE_JUDGE
+    #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
