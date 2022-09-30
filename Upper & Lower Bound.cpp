@@ -4,7 +4,7 @@ using namespace std;
 //Upper Bound and Lower Bound
 //CF EDU Binary Search Step 2
 
-int first(vector<int>arr, int x, int n)
+int first(int arr[], int x, int n)
 {
 	int low = 0, high = n - 1, res = -1;
 	while (low <= high)
@@ -20,7 +20,7 @@ int first(vector<int>arr, int x, int n)
 }
 
 
-int last(vector<int>arr, int x, int n)
+int last(int arr[], int x, int n)
 {
 	int low = 0, high = n - 1, res = -1;
 	while (low <= high)
