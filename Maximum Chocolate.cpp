@@ -39,78 +39,30 @@ using namespace std;
 const double PI = acos(-1);
 ll int hp = 1e9+7;
 
-//Using Loops
-void subArray(int arr[], int n)
+// Problem Disription: https://www.youtube.com/watch?v=dQa4A2Z0_Ro&list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&index=20
+
+int countMaxChoco(int money, int price, int wrap)
 {
-    for (int i=0; i <n; i++)
-    {
-        for (int j=i; j<n; j++)
-        {
-            for (int k=i; k<=j; k++)
-                cout << arr[k] << " ";
-  
-            cout << endl;
-        }
-    }
-}
-
-//Subarray Sum
-
-void subarraysum(int arr[],int n)
-{
-	for(int i=0;i<n;i++)
-	{
-		int curr=0;
-		for(int j=i;j<n;j++)
-		{
-			curr+=arr[j];
-			cout<<curr<<sp;
-		}
-	}
-
-}
-
-//Longest Arithematic Subarray
-//Array er value gular distance same hobe
-
-
-int LAS(int arr[],int n)
-{
-	int ans=2;
-	int pd=arr[1]-arr[0];
-	int j=2;
-	int curr=2;
-
-	while(j<n)
-	{
-		if(pd==arr[j]-arr[j-1])
-		{
-			curr++;
-		}
-		else
-		{
-			pd=arr[j]-arr[j-1];
-			curr=2;
-		}
-		ans=max(ans,curr);
-		j++;
-	}
-	cout<<ans<<dl;
+    if (money < price)
+       return 0;
+ 
+    int choc = money / price;
+ 
+    choc += (choc - 1) / (wrap - 1);
+    return choc;
 }
 
 
 void Boom()
 {
-	//Let's Move
+    //Let's Move
 
-	int n;
-	cin>>n;
-	int arr[n];
-	for(int i=0;i<n;i++)cin>>arr[i];
-
-	LAS(arr,n);
-
-	
+    int money = 15 ; // total money
+    int price = 1; // cost of each candy
+    int wrap = 3 ; // no of wrappers needs to be
+    // exchanged for one chocolate.
+ 
+    cout << countMaxChoco(money, price, wrap);
 
 
 
@@ -119,15 +71,15 @@ void Boom()
 
 int main()
 {
-	Boost;
+    Boost;
 
-	int t=1;       //cin>>t;
-	for(int i=1;i<=t;i++)
-	{
-		//cout<<"Case "<<i<<" : ";
-		Boom();
-	}
+    int t=1;      // cin>>t;
+    for(int i=1;i<=t;i++)
+    {
+        //cout<<"Case "<<i<<" : ";
+        Boom();
+    }
 
-	return 0;
+    return 0;
 
 }

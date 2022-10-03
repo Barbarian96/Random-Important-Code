@@ -39,64 +39,28 @@ using namespace std;
 const double PI = acos(-1);
 ll int hp = 1e9+7;
 
-//Using Loops
-void subArray(int arr[], int n)
+
+void printSubsequences(int arr[], int n)
 {
-    for (int i=0; i <n; i++)
+    // Number of subsequences is (2**n -1)
+
+    unsigned int opsize = pow(2, n);
+
+    /* Run from counter 000..1 to 111..1*/
+    for (int counter = 1; counter < opsize; counter++)
     {
-        for (int j=i; j<n; j++)
+        for (int j = 0; j < n; j++)
         {
-            for (int k=i; k<=j; k++)
-                cout << arr[k] << " ";
-  
-            cout << endl;
+            /* Check if jth bit in the counter is set If set then print jth element from arr[] */
+            if (counter & (1<<j))
+                cout << arr[j] << " ";
         }
+        cout << endl;
     }
 }
-
-//Subarray Sum
-
-void subarraysum(int arr[],int n)
-{
-	for(int i=0;i<n;i++)
-	{
-		int curr=0;
-		for(int j=i;j<n;j++)
-		{
-			curr+=arr[j];
-			cout<<curr<<sp;
-		}
-	}
-
-}
-
-//Longest Arithematic Subarray
-//Array er value gular distance same hobe
+  
 
 
-int LAS(int arr[],int n)
-{
-	int ans=2;
-	int pd=arr[1]-arr[0];
-	int j=2;
-	int curr=2;
-
-	while(j<n)
-	{
-		if(pd==arr[j]-arr[j-1])
-		{
-			curr++;
-		}
-		else
-		{
-			pd=arr[j]-arr[j-1];
-			curr=2;
-		}
-		ans=max(ans,curr);
-		j++;
-	}
-	cout<<ans<<dl;
-}
 
 
 void Boom()
@@ -106,9 +70,10 @@ void Boom()
 	int n;
 	cin>>n;
 	int arr[n];
+
 	for(int i=0;i<n;i++)cin>>arr[i];
 
-	LAS(arr,n);
+	subArray(arr,n);
 
 	
 
